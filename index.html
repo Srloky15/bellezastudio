@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
-
     <title>Salón de Belleza</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="container">
             <img src="images/logo.jpeg" alt="Logo del Salón de Belleza" class="logo">
             <nav>
-                <ul>
+                <ul id="menu">
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#about">Nosotros</a></li>
                     <li><a href="#contact">Contacto</a></li>
                     <li><a href="#social">Síguenos</a></li>
                 </ul>
+                <div id="menu-toggle" class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
         </div>
     </header>
@@ -43,25 +45,26 @@
             <p>Somos un equipo de profesionales dedicados a ofrecerte los mejores servicios de belleza con la más alta calidad y atención personalizada.</p>
         </div>
     </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Para más información o para reservar una cita, contáctanos en:</p>
+            <p><i class="fas fa-envelope"></i> Email: contacto@salondebelleza.com</p>
+            <p><i class="fas fa-phone"></i> Local: 5524636645</p>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp: 5619658077</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Plaza laureles Arturo Montiel, Cuautitlán México</p>
+        </div>
+    </section>
     <section id="social">
         <div class="container">
             <h2>Síguenos</h2>
             <p>Síguenos en nuestras redes sociales para estar al tanto de nuestras últimas novedades y promociones:</p>
             <p>
-                <a href="https://www.instagram.com/beaustudiotc?igsh=MXF0dm8xcjV3MzluNw==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.instagram.com/tu_usuario" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             </p>
             <p>
-                <a href="https://www.facebook.com/people/Tania-Chaparro-Romero/61560950654573/?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.facebook.com/tu_usuario" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
             </p>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Para más información o para reservar una cita, contáctanos en:</p>
-            <p><i class="fas fa-phone"></i> Local: 5524636645</p>
-            <p><i class="fab fa-whatsapp"></i> WhatsApp: 5619658077</p>
-            <p><i class="fas fa-map-marker-alt"></i> Dirección: Plaza laureles Arturo Montiel, Cuautitlán México</p>
         </div>
     </section>
     <footer>
@@ -69,5 +72,14 @@
             <p>&copy; 2024 Salón de Belleza. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
